@@ -1,5 +1,15 @@
 body{
-    margin: 0px;
-    padding: 10%;
-    background-color: #a1d2f8;
+    background-color: #c9f4ff;
+}
+
+.left-sidebar {
+    background-color: #93d4ff;
+}
+
+.main-content {
+    background-color: #3ef9ea;
+}
+
+.right-sidebar {
+    background-color: #93d4ff;
 }
