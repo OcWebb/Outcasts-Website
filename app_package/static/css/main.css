@@ -1,15 +1,31 @@
 body{
-    background-color: #c9f4ff;
+    background-color: #303030;
+    color: gainsboro;
+    padding-top: 55px;
 }
 
 .left-sidebar {
-    background-color: #93d4ff;
+    background-color: #303030;
 }
 
 .main-content {
-    background-color: #3ef9ea;
+    background-color: black;
 }
 
 .right-sidebar {
-    background-color: #93d4ff;
+    background-color: #303030;
+}
+
+.formPost {
+    background-color: #bdbdbd;
+    color: black;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+}
+
+.user-info {
+    padding-left: 0;
 }
