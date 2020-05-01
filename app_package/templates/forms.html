@@ -4,15 +4,14 @@
 
 {% for post in posts %}
 
-<div class="container-fluid rounded formPost my-3 p-2">
-    <div class="container user-info col-s-1">
-        <img src={{ post.pic }} alt="" class="rounded float-left profile-pic">
-    </div>
-    
-    <div class="container col">
-        <p>{{ post.content }}</p>
-    </div>
-    <h6 class="row">{{ post.username }}</h6>
+<div class="container-fluid rounded formPost clearfix my-3 p-2">
+        <div class="float-left pr-2">
+            <img src={{ post.pic }} alt="" class="rounded profile-pic">
+            <div class="text-wrap" style="width: 3rem;">
+                <h6 class="text-center">{{ post.username }}</h6>
+            </div>
+        </div>
+        <div>{{ post.content|truncate(500) }}</div>
 </div>
 
 {% endfor %}
@@ -23,9 +22,8 @@
 <h5 class="text-center pt-3">Form Topics</h1>
 <hr class="solid">
 <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
-    <a class="nav-link text-sm-center active" data-toggle="pill" href="#v-pills-home" role="tab">The Pub</a>
-    <a class="nav-link text-sm-center" data-toggle="pill" href="#v-pills-profile" role="tab">League of Legends</a>
-    <a class="nav-link text-sm-center" data-toggle="pill" href="#v-pills-messages" role="tab">Americas Army</a>
-    <a class="nav-link text-sm-center" data-toggle="pill" href="#v-pills-settings" role="tab">Settings</a>
+    <a class="nav-link text-sm-right active" data-toggle="pill" href="#v-pills-home" role="tab">The Pub</a>
+    <a class="nav-link text-sm-right" data-toggle="pill" href="#v-pills-profile" role="tab">League of Legends</a>
+    <a class="nav-link text-sm-right" data-toggle="pill" href="#v-pills-messages" role="tab">Americas Army</a>
 </div>
 {% endblock %}
