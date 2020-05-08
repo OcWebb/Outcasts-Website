@@ -11,19 +11,24 @@
                 <h6 class="text-center">{{ post.username }}</h6>
             </div>
         </div>
-        <div>{{ post.content|truncate(500) }}</div>
+        <p>{{ post.content|truncate(500) }}</p>
+        <div class="btn-group float-right btn-group-sm" role="group">
+            <button type="button" class="btn btn-dark btn-secondary">Comment</button>
+            <button type="button" class="btn btn-success btn-secondary"><span class="glyphicon glyphicon-thumbs-up"></span>Like</button>
+            <button type="button" class="btn btn-danger btn-secondary"><span class="glyphicon glyphicon-thumbs-down"></span>Dislike</button>        </div>
 </div>
 
 {% endfor %}
 
 {% endblock %}
-
+ 
 {% block sidebarLeft %}
-<h5 class="text-center pt-3">Form Topics</h1>
-<hr class="solid">
-<div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
-    <a class="nav-link text-sm-right active" data-toggle="pill" href="#v-pills-home" role="tab">The Pub</a>
-    <a class="nav-link text-sm-right" data-toggle="pill" href="#v-pills-profile" role="tab">League of Legends</a>
-    <a class="nav-link text-sm-right" data-toggle="pill" href="#v-pills-messages" role="tab">Americas Army</a>
+<h4 class="p-3 text-right">Form Topics</h4>
+<div class="nav flex-column nav-pills left-sidebar float-right m-0" role="tablist" aria-orientation="vertical">
+    <a class="nav-link text-sm-right text-center active" data-toggle="pill" href="#v-pills-home" role="tab">The Pub</a>
+    <a class="nav-link text-sm-right text-center" data-toggle="pill" href="#v-pills-profile" role="tab">League of Legends</a>
+    <a class="nav-link text-sm-right text-center" data-toggle="pill" href="#v-pills-messages" role="tab">Americas Army</a>
+    <a class="nav-link text-sm-right text-center" data-toggle="pill" href="#v-pills-test" role="tab">Ark</a>
+    <a class="nav-link text-sm-right text-center" data-toggle="pill" href="#v-pills-messages" role="tab">Warzone</a>
 </div>
 {% endblock %}
