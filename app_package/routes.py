@@ -1,13 +1,16 @@
 from flask import render_template
 from app_package import app
+
+
 """
 members list with classes
 --form banner for user
     profile pic
     username
     online list with mmbers list
-    
 """
+
+
 posts = [
     {
         'username': 'FIRST',
