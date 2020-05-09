@@ -4,7 +4,8 @@
 
 {% for post in posts %}
 
-<div class="container-fluid rounded formPost clearfix my-3 p-2">
+<div class="container-fluid rounded formPost my-3 p-2">
+    <div class="d-flex">
         <div class="float-left pr-2">
             <img src={{ post.pic }} alt="" class="rounded profile-pic">
             <div class="text-wrap" style="width: 3rem;">
@@ -12,10 +13,22 @@
             </div>
         </div>
         <p>{{ post.content|truncate(500) }}</p>
-        <div class="btn-group float-right btn-group-sm" role="group">
-            <button type="button" class="btn btn-dark btn-secondary">Comment</button>
-            <button type="button" class="btn btn-success btn-secondary"><span class="glyphicon glyphicon-thumbs-up"></span>Like</button>
-            <button type="button" class="btn btn-danger btn-secondary"><span class="glyphicon glyphicon-thumbs-down"></span>Dislike</button>        </div>
+    </div>
+    
+    <div class="d-flex">
+        <div class="btn-group btn-group-sm order-3" role="group">
+            <button type="button" class="btn btn-dark btn-secondary p-0"><span class="material-icons md-36">expand_less</span></button>
+            <button type="button" class="btn btn-dark btn-secondary p-0"><span class="material-icons md-36">expand_more</span></button>
+            <button type="button" class="btn btn-dark btn-secondary pr-2"><span class="material-icons md-28">add_comment</span></button>
+        </div>
+        <div class="card p-2 ml-auto order-2">
+            <div class="card-body font-weight-bold text-center p-0">24</div>
+        </div>
+        <div class="order-1 ml-auto">
+            <a class="font-weight-bold text-center align-bottom p-0 h-100 mt-auto" href="#">See More</a>
+        </div>
+    </div>
+        
 </div>
 
 {% endfor %}
