@@ -5,27 +5,43 @@
 {% for post in posts %}
 
 <div class="container-fluid rounded formPost my-3 p-2">
-    <div class="container user-info col-s-1">
-        <img src={{ post.pic }} alt="" class="rounded float-left profile-pic">
+    <div class="d-flex">
+        <div class="float-left pr-2">
+            <img src={{ post.pic }} alt="" class="rounded profile-pic">
+            <div class="text-wrap" style="width: 3rem;">
+                <h6 class="text-center">{{ post.username }}</h6>
+            </div>
+        </div>
+        <p>{{ post.content|truncate(500) }}</p>
     </div>
     
-    <div class="container col">
-        <p>{{ post.content }}</p>
+    <div class="d-flex bottom-util">
+        <div class="btn-group btn-group-sm order-3" role="group">
+            <button type="button" class="btn btn-dark btn-secondary p-0"><span class="material-icons md-36">expand_less</span></button>
+            <button type="button" class="btn btn-dark btn-secondary p-0"><span class="material-icons md-36">expand_more</span></button>
+            <button type="button" class="btn btn-dark btn-secondary pr-2"><span class="material-icons md-28">add_comment</span></button>
+        </div>
+        <div class="card p-2 ml-auto order-2">
+            <div class="card-body font-weight-bold text-center p-0">24</div>
+        </div>
+        <div class="order-1 ml-auto">
+            <a class="p-0 font-weight-bold bottom" href="#">See More</a>
+        </div>
     </div>
-    <h6 class="row">{{ post.username }}</h6>
+        
 </div>
 
 {% endfor %}
 
 {% endblock %}
-
+ 
 {% block sidebarLeft %}
-<h5 class="text-center pt-3">Form Topics</h1>
-<hr class="solid">
-<div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
-    <a class="nav-link text-sm-center active" data-toggle="pill" href="#v-pills-home" role="tab">The Pub</a>
-    <a class="nav-link text-sm-center" data-toggle="pill" href="#v-pills-profile" role="tab">League of Legends</a>
-    <a class="nav-link text-sm-center" data-toggle="pill" href="#v-pills-messages" role="tab">Americas Army</a>
-    <a class="nav-link text-sm-center" data-toggle="pill" href="#v-pills-settings" role="tab">Settings</a>
+<h4 class="p-3 text-right">Form Topics</h4>
+<div class="nav flex-column nav-pills left-sidebar float-right m-0" role="tablist" aria-orientation="vertical">
+    <a class="nav-link text-sm-right text-center active" data-toggle="pill" href="#v-pills-home" role="tab">The Pub</a>
+    <a class="nav-link text-sm-right text-center" data-toggle="pill" href="#v-pills-profile" role="tab">League of Legends</a>
+    <a class="nav-link text-sm-right text-center" data-toggle="pill" href="#v-pills-messages" role="tab">Americas Army</a>
+    <a class="nav-link text-sm-right text-center" data-toggle="pill" href="#v-pills-test" role="tab">Ark</a>
+    <a class="nav-link text-sm-right text-center" data-toggle="pill" href="#v-pills-messages" role="tab">Warzone</a>
 </div>
 {% endblock %}
