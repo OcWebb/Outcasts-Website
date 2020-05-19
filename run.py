@@ -1,4 +1,3 @@
-from app_package import app, db
-import webbrowser
+from app_package import app
 
 app.run(port=5000, debug=True)
